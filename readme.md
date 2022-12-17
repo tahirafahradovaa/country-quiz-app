@@ -1,2 +1,2 @@
 // Click here for live preview
-'https://task-country-quiz.netlify.app/'
+https://quiz-country-app-tahira.netlify.app/
