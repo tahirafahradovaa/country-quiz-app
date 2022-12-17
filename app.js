@@ -17,12 +17,15 @@ const getCountry = async () => {
 };
 //generate container
 function fillPage(data) {
+  console.log(randomNumber);
   const newArr = shuffleArr(randomQuestionArr);
+  const shuffled = shuffleArr(randomNumber);
+  console.log(shuffled);
   gameContainer.innerHTML = "";
   const container = document.createElement("div");
   const questions = [
     "Which country does this flag belong to?",
-    `${data[randomNumber[1]].capital} is the capital of:`,
+    `${data[1].capital} is the capital of:`,
   ];
   let imgSrc = `${data[1].flags.svg}`;
   const correctAnswer = data[1].name.common;
@@ -31,33 +34,33 @@ function fillPage(data) {
   const h3 = document.createElement("h3");
   container.classList.add("container");
   h3.innerHTML = `${questions[newArr[0]]}`;
-
+  console.log(correctAnswer);
   const img = document.createElement("img");
   img.setAttribute("src", imgSrc);
 
   const varA = document.createElement("button");
   varA.innerHTML = `<span class='variant'>A</span>${
-    data[randomNumber[1]].name.common
+    data[shuffled[1]].name.common
   }`;
 
   const varB = document.createElement("button");
   varB.innerHTML = `<span class='variant'>B</span>${
-    data[randomNumber[0]].name.common
+    data[shuffled[0]].name.common
   }`;
 
   const varC = document.createElement("button");
   varC.innerHTML = `<span class='variant'>C</span>${
-    data[randomNumber[2]].name.common
+    data[shuffled[2]].name.common
   }`;
 
   const varD = document.createElement("button");
   varD.innerHTML = `<span class='variant'>D</span>${
-    data[randomNumber[3]].name.common
+    data[shuffled[3]].name.common
   }`;
 
   const varE = document.createElement("button");
   varE.innerHTML = `<span class='variant'>E</span>${
-    data[randomNumber[4]].name.common
+    data[shuffled[4]].name.common
   }`;
 
   if (h3.innerText.includes("capital")) {
@@ -134,6 +137,7 @@ for (let i = 0; i < 30; i++) {
     randomNumber.push(number);
   }
 }
+
 //rand numbers for questions
 let randomQuestionArr = [];
 for (let i = 0; i < 5; i++) {

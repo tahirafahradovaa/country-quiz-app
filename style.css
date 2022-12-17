@@ -129,5 +129,11 @@ display: inline-block;
     width: 18rem;
     
    }
+   .hovering:hover{
+    background-color: white;
+      color:  rgb(92, 152, 192);
+      
+}
+   
 }
 
