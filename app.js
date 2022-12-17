@@ -17,10 +17,9 @@ const getCountry = async () => {
 };
 //generate container
 function fillPage(data) {
-  console.log(randomNumber);
   const newArr = shuffleArr(randomQuestionArr);
   const shuffled = shuffleArr(randomNumber);
-  console.log(shuffled);
+
   gameContainer.innerHTML = "";
   const container = document.createElement("div");
   const questions = [
@@ -34,7 +33,7 @@ function fillPage(data) {
   const h3 = document.createElement("h3");
   container.classList.add("container");
   h3.innerHTML = `${questions[newArr[0]]}`;
-  console.log(correctAnswer);
+
   const img = document.createElement("img");
   img.setAttribute("src", imgSrc);
 
@@ -93,7 +92,6 @@ function fillPage(data) {
         button.setAttribute("id", "rest");
       } else if (value.includes(correctAnswer)) {
         score = score + 1;
-        console.log(score);
         button.classList.add("winner");
         isOver = true;
         setTimeout(getCountry, 3000);
