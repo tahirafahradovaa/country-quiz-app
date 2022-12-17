@@ -1,0 +1,133 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+body{
+
+    background-image: url("./images/background.png");
+    background-attachment: fixed;
+    background-size: cover;
+}
+.container{
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 20rem;
+    height: 30rem;
+    margin: 100px auto;
+    border-radius: 15px;
+    position: relative;
+}
+
+h3, h2{
+    font-weight: 700;
+    color: rgb(43, 48, 147);
+
+    
+}
+#try-again{
+    border: 1px solid  rgb(43, 48, 147);
+    color:  rgb(43, 48, 147);
+    cursor: pointer;
+}
+.result-screen{
+    display: flex;
+    padding: 20px 40px;
+    align-items: center;
+    justify-content: space-between;
+    flex-direction: column;
+    background-color: whitesmoke;
+    width: 19rem;
+    height: 22rem;
+    margin: 100px auto;
+    border-radius: 15px;
+    position: relative;
+    font-size: 20px;
+    display: none;
+}
+.winner{
+    color: white;
+    background-color: rgb(39, 103, 39);
+}
+.loser{
+    color: white;
+    background-color: rgb(144, 24, 24);
+}
+header{
+    padding: 40px 35px 10px 35px;
+    display: flex;
+    flex-direction: column;
+    align-items: left;
+    gap: 15px;
+   
+}
+section{
+    padding: 19px;
+    display: flex;
+    flex-direction: column;
+    gap: 10px;
+}
+img{
+    width: 40%;
+}
+.score{
+    color: rgb(39, 103, 39);
+    font-weight: 700;
+    font-size: 25px;
+}
+button{
+    padding: 10px 25px;
+    border-radius: 15px;
+    border: 1px solid rgb(92, 152, 192);
+    color:  rgb(92, 152, 192);
+    position: relative;
+    height: auto;
+ 
+}
+#rest{
+    background-color: transparent;
+    color:  rgb(92, 152, 192);
+}
+
+.variant{
+  position: absolute;
+  left: 15px;
+}
+.hovering{
+    cursor: pointer;
+  
+}
+.hovering:hover{
+    background-color: rgb(224, 161, 43);
+    color: white;
+}
+.winner:focus{
+    background-color:rgb(9, 134, 9);
+    color: white;
+}
+.loser:focus{
+    background-color: rgb(213, 41, 41);
+    color: white;
+}
+#result-img{
+    width: 70%;
+}
+.container::after{
+content: "";
+width: 90px;
+height: 120px;
+background: url("./images/undraw_adventure_4hum\ 1.svg") ;
+top: -60px;
+right: 0;
+position: absolute;
+display: inline-block;
+}
+@media (max-width:600px){
+   .container{
+    width: 18rem;
+    
+   }
+}
+
