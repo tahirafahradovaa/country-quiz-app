@@ -105,9 +105,11 @@ function fillPage(data) {
           }
         }
         isOver = true;
-        container.style.display = "none";
-        resultScreen.style.display = "flex";
-        scoreSpan.innerHTML = score;
+        setTimeout(() => {
+          container.style.display = "none";
+          resultScreen.style.display = "flex";
+          scoreSpan.innerHTML = score;
+        }, 3000);
       }
       if (isOver)
         buttons.forEach((button) => button.classList.remove("hovering"));
